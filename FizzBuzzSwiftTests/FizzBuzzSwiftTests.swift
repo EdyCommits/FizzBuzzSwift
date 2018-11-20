@@ -1,29 +1,5 @@
-//
-//  FizzBuzzSwiftTests.swift
-//  FizzBuzzSwiftTests
-//
-//  Created by Edyta Bednarz on 20/11/2018.
-//  Copyright © 2018 Edyta Bednarz. All rights reserved.
-//
-
 import XCTest
 @testable import FizzBuzzSwift
-
-func fizzbuzz(_ number: Int) -> String {
-    
-    
-    if number % 15 == 0 {
-        return "FizzBuzz"
-        
-    } else if number % 3 == 0 {
-        return "Fizz"
-    
-    } else if number % 5 == 0 {
-        return "Buzz"
-        
-    }
-    return String(number)
-}
 
 class FizzBuzzSwiftTests: XCTestCase {
 
