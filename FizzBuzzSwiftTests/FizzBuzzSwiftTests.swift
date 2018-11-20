@@ -3,45 +3,38 @@ import XCTest
 
 class FizzBuzzSwiftTests: XCTestCase {
 
-    func testReturnsOneIfNumberIsOne() {
+    func testReturnsNumberIfNumberIsNotMultipleOfThreeOrFive() {
         XCTAssertEqual(fizzbuzz(1), "1")
-    }
-    
-    func testReturnsTwoIfNumberIsTwo() {
         XCTAssertEqual(fizzbuzz(2), "2")
-    }
-    
-    func testReturnsFizzIfNumberIsThree() {
-        XCTAssertEqual(fizzbuzz(3), "Fizz")
-    }
-    
-    func testReturnsFourIfNumberIsFour() {
         XCTAssertEqual(fizzbuzz(4), "4")
+        XCTAssertEqual(fizzbuzz(7), "7")
+        XCTAssertEqual(fizzbuzz(8), "8")
+        XCTAssertEqual(fizzbuzz(11), "11")
+        XCTAssertEqual(fizzbuzz(13), "13")
+        XCTAssertEqual(fizzbuzz(14), "14")
+        XCTAssertEqual(fizzbuzz(22), "22")
+        XCTAssertEqual(fizzbuzz(44), "44")
     }
     
-    func testReturnsBuzzIfNumberIsFive() {
-        XCTAssertEqual(fizzbuzz(5), "Buzz")
-    }
-    
-    func testReturnsFizzIfNumberIsSix() {
+    func testReturnsFizzIfNumberIsMultipleOfThree() {
+        XCTAssertEqual(fizzbuzz(3), "Fizz")
         XCTAssertEqual(fizzbuzz(6), "Fizz")
-    }
-    
-    func testReturnsFizzIfNumberIsNine() {
         XCTAssertEqual(fizzbuzz(9), "Fizz")
+        XCTAssertEqual(fizzbuzz(12), "Fizz")
     }
     
-    func testReturnsBuzzIfNumberIsTen() {
+    func testReturnsBuzzIfNumberIsMultipleOfFive() {
+        XCTAssertEqual(fizzbuzz(5), "Buzz")
         XCTAssertEqual(fizzbuzz(10), "Buzz")
+        XCTAssertEqual(fizzbuzz(20), "Buzz")
+        XCTAssertEqual(fizzbuzz(25), "Buzz")
     }
     
-    func testReturnsFizzBuzzIfNumberIsFifteen() {
+    func testReturnsFizzBuzzIfNumberIsMultipleOfThreeAndFive() {
         XCTAssertEqual(fizzbuzz(15), "FizzBuzz")
-    }
-    
-    func testReturnsFizzBuzzIfNumberIsThirty() {
         XCTAssertEqual(fizzbuzz(30), "FizzBuzz")
+        XCTAssertEqual(fizzbuzz(45), "FizzBuzz")
+        XCTAssertEqual(fizzbuzz(60), "FizzBuzz")
     }
-
 
 }
